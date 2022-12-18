@@ -23,7 +23,7 @@ button=st.button("Generate")
 
 
 def gen_auto_response(ques):
-    openai.api_key=st.secret("api")
+    openai.api_key=st.secrets["api"]
     
     response = openai.Completion.create(
       model="text-davinci-003",
